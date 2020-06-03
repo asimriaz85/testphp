@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":295:{a:2:{s:7:"defects";a:1:{s:21:"EmailTest::testToFail";i:3;}s:5:"times";a:4:{s:48:"EmailTest::testCanBeCreatedFromValidEmailAddress";d:0.121;s:53:"EmailTest::testCannotBeCreatedFromInvalidEmailAddress";d:0.027;s:32:"EmailTest::testCanBeUsedAsString";d:0.017;s:21:"EmailTest::testToFail";d:0.051;}}}

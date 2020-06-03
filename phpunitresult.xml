@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/var/www/html/jenkins/phpproject/tests" tests="4" assertions="4" errors="0" warnings="0" failures="1" skipped="0" time="0.215353">
+    <testsuite name="EmailTest" file="/var/www/html/jenkins/phpproject/tests/EmailTest.php" tests="4" assertions="4" errors="0" warnings="0" failures="1" skipped="0" time="0.215353">
+      <testcase name="testCanBeCreatedFromValidEmailAddress" class="EmailTest" classname="EmailTest" file="/var/www/html/jenkins/phpproject/tests/EmailTest.php" line="6" assertions="1" time="0.120801"/>
+      <testcase name="testCannotBeCreatedFromInvalidEmailAddress" class="EmailTest" classname="EmailTest" file="/var/www/html/jenkins/phpproject/tests/EmailTest.php" line="14" assertions="1" time="0.026724"/>
+      <testcase name="testCanBeUsedAsString" class="EmailTest" classname="EmailTest" file="/var/www/html/jenkins/phpproject/tests/EmailTest.php" line="21" assertions="1" time="0.016880"/>
+      <testcase name="testToFail" class="EmailTest" classname="EmailTest" file="/var/www/html/jenkins/phpproject/tests/EmailTest.php" line="28" assertions="1" time="0.050948">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">EmailTest::testToFail
+Failed asserting that 2 matches expected '1'.
+
+/var/www/html/jenkins/phpproject/tests/EmailTest.php:32
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

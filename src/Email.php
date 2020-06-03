@@ -15,6 +15,9 @@ final class Email
         return new self($email);
     }
 
+    public function notCovered(){
+    	echo "I am not covered";
+    }
     public function __toString(): string
     {
         return $this->email;

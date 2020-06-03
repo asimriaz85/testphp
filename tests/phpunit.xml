@@ -1,0 +1,26 @@
+<phpunit
+		colors="false"
+		convertErrorsToExceptions="true"
+		convertNoticesToExceptions="true"
+		convertWarningsToExceptions="true"
+		stopOnFailure="false"
+		
+>
+<testsuites>
+		<testsuite name="Test suite">	
+				<directory>.</directory>
+		</testsuite>
+</testsuites>
+<filter>
+            <whitelist addUncoveredFilesFromWhitelist="true">
+                <directory>../src</directory>
+               <!--  <exclude>
+                    <directory></directory>
+                    
+                </exclude> -->
+            </whitelist>
+        </filter>
+
+</phpunit>
+
+

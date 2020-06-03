@@ -1,0 +1,16 @@
+docker exec quartz_web_1 sh -c 'php /var/www/html/jenkins/phpproject/vendor/bin/phpunit /var/www/html/jenkins/phpproject/  --log-junit /var/jenkins_home/workspace/testingwithant/phpunuitproject/results/phpunit.xml'
+
+sudo docker exec quartz_web_1 sh -c 'composer install -d /var/www/html/testingproject/phpproject'
+sudo docker exec quartz_web_1 sh -c 'composer dump-autoload -o -d /var/www/html/testingproject/phpproject'
+
+
+sudo docker exec quartz_web_1 sh -c 'php /var/www/html/testingproject/phpproject/vendor/bin/phpunit /var/www/html/testingproject/phpproject/tests  --log-junit /var/www/html/testingproject/phpproject/phpunitresult.xml'
+
+
+sudo cp /opt/testingproject/phpproject/phpunitresult.xml /var/lib/jenkins/workspace/testing/phpproject/phpunitresult.xml
+
+
+/var/www/html/testingproject/phpproject
+
+
+sudo docker exec quartz_web_1 sh -c 'php /var/www/html/jenkins/phpproject/vendor/bin/phpunit /var/www/html/jenkins/phpproject/tests  --log-junit /var/www/html/jenkins/phpproject/phpunitresult.xml --coverage-html \'/var/www/html/jenkins/phpproject/reports/coverage\'  -c /var/www/html/jenkins/phpproject/tests/phpunit.xml'
