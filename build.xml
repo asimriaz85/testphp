@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="TKSWeb" default="build">
+ <property name="targetdir" value="${targetdir}" />
+ <property name="sourcedir" value="${sourcedir}" />
+ 
+ <target name="build" depends="clean,  deploy" />
+
+ <target name="clean" description="Cleanup build artifacts">
+  <delete dir="${basedir}/phpcs"/>
+  <delete dir="${basedir}/pdepend"/>
+  <delete dir="${basedir}/messdetector.xml"/>
+ </target>
+ 
+ <target name="deploy" >
+ 	<echo message="${basedir}"/>
+	<copy todir="${targetdir}" overwrite="true">
+		<fileset dir="${basedir}">
+      <exclude name=".git/**" />
+			<exclude name="phpcs/**" />
+			<exclude name="pdepend/**" />
+			<exclude name="messdetector.xml" />
+			<exclude name=".buildpath" />
+			<exclude name=".project" />
+			<exclude name=".gitignore" />
+			<exclude name=".settings/*" />
+			<exclude name="vendor/**" />
+		</fileset>
+	</copy>
+ </target>
+ 
+</project>
