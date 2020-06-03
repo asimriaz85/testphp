@@ -29,7 +29,7 @@ final class EmailTest extends TestCase
     {
         $this->assertEquals(
             '1',
-            1
+            2
         );
     }
 }
