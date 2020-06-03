@@ -7,6 +7,7 @@
  <target name="build" depends="clean,  deploy" />
 
  <target name="clean" description="Cleanup build artifacts">
+  <delete dir="${basedir}/**"/>
   <delete dir="${basedir}/phpcs"/>
   <delete dir="${basedir}/pdepend"/>
   <delete dir="${basedir}/messdetector.xml"/>

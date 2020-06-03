@@ -25,4 +25,11 @@ final class EmailTest extends TestCase
             Email::fromString('user@example.com')
         );
     }
+    public function testToFail(): void
+    {
+        $this->assertEquals(
+            '1',
+            2
+        );
+    }
 }
