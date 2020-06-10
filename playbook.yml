@@ -1,0 +1,12 @@
+---
+- name: Test Ansible Script
+  hosts: webservers
+  tasks:
+    - copy:
+       src: "{{inventory_dir}}/src/Email.php"
+       dest: "{{webdirectory}}/Email.php"
+       mode: 0777
+
+   
+
+
